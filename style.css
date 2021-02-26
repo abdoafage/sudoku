@@ -1,0 +1,101 @@
+:root{
+    --color1:black;
+    --color2:white;
+}
+*{
+    box-sizing: border-box;
+    padding:0;
+    margin:0;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color:var(--color2) ;
+    font-family: sans-serif;
+    background-color: lavender;
+}
+.title{
+    padding: 15px;
+    font-size: 30px;
+    font-weight:bold;
+    /* text-shadow: 2px 2px 5px #008cff; */
+    font-family: cursive;
+    /* border-bottom: 1px solid rgb(180, 180, 180); */
+    position: relative;
+}
+
+.title::after{
+    content: "";
+    position: absolute;
+    display: block;
+    width: 100%;
+    height:2px;
+    left:50%;
+    transform: translate(-50%);
+    background-color: #008cff;
+}
+.level{
+    color:#006eff;
+    font-weight: bold;
+}
+.sodoku_APP{
+    
+}
+table{
+    width: 450px;
+    height:450px;
+    border-collapse: collapse;
+    border:1px solid var(--color1);
+    margin:30px;
+}
+td{
+    border:1px solid var(--color1);
+    text-align: center;
+    font-weight:bolder;
+    font-size: 30px;
+    cursor: pointer;
+    color:var(--color1)
+}
+td:nth-child(3),td:nth-child(6){
+    border-right:5px solid var(--color1);
+}
+tr:nth-child(3),tr:nth-child(6){
+    border-bottom: 5px solid var(--color1);
+}
+
+.incorrect{
+    color:red;
+}
+.notAllow{
+    pointer-events: none;
+    cursor: not-allowed;
+}
+.select{
+    background-color: #aad5f8;
+}
+.color{
+    color:#006eff;
+}
+.buttons{
+    /* border:3px solid black; */
+    padding:10px;
+    display: flex;
+    justify-content: space-evenly;
+}
+.buttons button{
+    padding:15px;
+    cursor: pointer;
+    border-radius:10px;
+    border:none;
+    background-color:#008cff;
+    color:white;
+    font-size: 20px;
+    font-weight:bold;
+    outline:none;
+    transition: all .1s ease-in-out;
+}
+.buttons button:hover{
+    box-shadow: 1px 1px 5px 2px rgb(134, 134, 134);
+}
